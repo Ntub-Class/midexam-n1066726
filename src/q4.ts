@@ -6,7 +6,17 @@
 
 
 let calc = function (calcString: string) {
-
+    if (calcString.charAt(1) === '+') {
+        console.log(parseInt(calcString.charAt(0), 10) + parseInt(calcString.charAt(2), 10));
+    } else if (calcString.charAt(1) === '-') {
+        console.log(parseInt(calcString.charAt(0), 10) - parseInt(calcString.charAt(2), 10));
+    } else if (calcString.charAt(1) === '*') {
+        console.log(parseInt(calcString.charAt(0), 10) * parseInt(calcString.charAt(2), 10));
+    } else if (calcString.charAt(1) === '/') {
+        console.log(parseInt(calcString.charAt(0), 10) / parseInt(calcString.charAt(2), 10));
+    }else{
+        console.log('只能輸入個位數和加減乘除');
+    }
 }
 
 calc('8*2')
